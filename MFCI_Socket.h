@@ -7,28 +7,6 @@
 
 #pragma comment (lib, "ws2_32.lib")
 
-//для МФЦИ
-#define DEFAULT_PORT 5513
-#define DEFAULT_IP "192.168.11.67"//"127.0.0.1"//"192.168.11.25"//"192.20.98.12"
-#define DEFAULT_IP1	"192.20.98.12"
-#define DEFAULT_IP2	"192.20.98.13"
-#define DEFAULT_IP3	"192.20.98.14"
-
-//Для ПУИ
-#define DEFAULT_PORT_PUI 5514
-#define DEFAULT_IP_PUI "192.168.11.67"//"127.0.0.1"//"192.168.11.25"//"192.20.98.12"
-
-
-//rec
-#define DEFAULT_PORT_REC 7777
-#define DEFAULT_IP_REC "192.168.11.13"//"192.20.98.11"//"192.168.11.13"//"192.168.11.13"
-
-/*
-Errors:
-10		error read ini file, main section
-
-*/
-
 namespace sockserv
 {
 	class socket_server
@@ -36,9 +14,9 @@ namespace sockserv
 
 	public:
 		//объект структуры
-		MFCIstruc stru;	//МФЦИ
-		PUIstruc struPUI;	//ПУИ
-		MFCI_struct_out MFCI_struct_out;
+		1 stru;
+		2 struPUI;
+		3 MFCI_struct_out;
 
 	private:
 		////переменные

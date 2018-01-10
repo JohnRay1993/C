@@ -9,36 +9,6 @@
 
 #pragma comment (lib, "ws2_32.lib")
 
-///send
-//CabinState
-#define DEFAULT_PORT_SEND 5033//5575
-#define DEFAULT_IP_SEND "192.20.98.212"//"127.0.0.1"//"192.20.98.11"//"192.168.10.86"//"192.20.98.12"
-
-//SettingsState
-#define DEFAULT_PORT_STATE 5585
-#define DEFAULT_PORT_STATE_REC 5580
-#define DEFAULT_IP_STATE "192.20.98.212"//"127.0.0.1"//"192.20.98.11"//"192.168.10.86"//"192.20.98.c12"
-
-//передача кнопок мфци
-//MFDIsState
-#define DEFAULT_PORT_MFDIsState 5566
-#define DEFAULT_IP_MFDIsState "192.20.98.212"//"127.0.0.1"
-
-
-///rec
-//ModelStatePocket
-#define DEFAULT_PORT_REC 5560
-#define DEFAULT_IP_REC "192.20.98.11"//"127.0.0.1"//"192.20.98.11"//"192.168.10.86"//"192.20.98.c12"
-
-//прием подсветка кнопок пультов
-//CabinIndicationState
-#define DEFAULT_PORT_REC2 5570
-#define DEFAULT_IP_REC2 "192.20.98.11"//"127.0.0.1"
-
-//Приём структуры для визуалки из динамики
-#define DEFAULT_PORT_Visual 6000
-#define DEFAULT_IP_Visual "192.168.11.25"//"192.20.98.11"//"127.0.0.1"
-
 #define MAGIC 0x12345678	//delete?
 
 
@@ -57,20 +27,20 @@ namespace soc
 		//объект структуры
 
 		//прием
-		ModelState1 stru_in;
-		ModelState2 stru_in2;
+		1 stru_in;
+		2 stru_in2;
 
 		//отправка
-		CabinState stru_out;
+		3 stru_out;
 
 		//управление моделью
-		SettingsState stru_state;
+		4 stru_state;
 
 		//
-		CabinIndicationState stru_CabinIndicationState;
+		5 stru_CabinIndicationState;
 
 		//кнопки мфци
-		MFDIsState stru_MFDIsState;
+		6 stru_MFDIsState;
 	private:
 		////переменные
 		int send_socket, rec_socket, rec_socket_cis, send_socketMFDI, rec_socket_visual;
